@@ -24,7 +24,118 @@ body {
   font-family: $font-stack;
   height: 100%;
   font-size: 14px;
-  color: #333;
+  color: #ffd500;
   line-height: 1.2;
-  background-color: #fff;
+  background-color: #005bbb;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2vh 0 0 0;
+  font-size: 20px;
+  @include xs-devices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left-side,
+  .right-side {
+    position: relative;
+    @include xs-devices {
+      margin: 0vh 0 3vh 0;
+    }
+    h2 {
+      font-size: inherit;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style-type: none;
+      margin: 0;
+      .list-item {
+        font-size: 18px;
+        margin: 0 0 2vh 0;
+        a {
+          position: relative;
+          text-decoration: none;
+          color: #ffd500;
+          transition: 0.4s;
+          &:hover,
+          &:focus {
+            color: #fff;
+          }
+        }
+        a::before {
+          content: "";
+          width: 64px;
+          height: 64px;
+          background: url("../../images/svg/react-logo.svg") no-repeat center;
+          position: absolute;
+          left: calc(0% - 60px);
+          top: calc(0% - 22px);
+          transform: scale(0.4);
+          filter: brightness(3);
+          animation: rotateLogo infinite 2s ease-in-out;
+          animation-fill-mode: both;
+        }
+        a:hover::before {
+          animation: none;
+        }
+      }
+      .list-item:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+  .right-side {
+    @include xs-devices {
+      margin: 0;
+    }
+    &__list {
+      .list-item {
+        a::before {
+          background: url("../../images/svg/js-logo.svg") no-repeat center;
+          filter: brightness(1);
+          animation: toggleBrightness infinite 2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg) scale(0.4);
+    filter: brightness(200%);
+  }
+  66% {
+    transform: rotate(360deg) scale(0.6);
+    filter: brightness(1);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.4);
+    filter: brightness(200%);
+  }
+}
+
+@keyframes toggleBrightness {
+  0% {
+    transform: scale(0.4);
+    filter: brightness(1);
+  }
+  66% {
+    transform: scale(0.6);
+    filter: brightness(0.7);
+  }
+  100% {
+    transform: scale(0.4);
+    filter: brightness(1);
+  }
 }

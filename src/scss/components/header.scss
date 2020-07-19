@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2vh 0 0 0;
+  &__inner {
+    font-size: 26px;
+    line-height: 1;
+    @include xs-devices {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
