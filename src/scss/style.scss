@@ -1,0 +1,20 @@
+// LIBS
+$fa-font-display: swap;
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~bootstrap/scss/bootstrap";
+@import "../js/components/libs/slick-carousel/slick/slick.css";
+
+// VARIABLES AND MIXINS
+$font-stack: "Roboto", "Montserrat", "Roboto Slab", sans-serif;
+$font-main: "Roboto", sans-serif;
+$font-main-second: "Montserrat", sans-serif;
+$font-main-third: "Roboto Slab", sans-serif;
+
+// COMPONENTS
+@import "./components/header";
+@import "./components/footer";
+
+// PAGES
+@import "./pages/main";
