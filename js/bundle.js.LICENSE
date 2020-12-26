@@ -4715,6 +4715,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// IE 8 has a broken Object.defineProperty that only works on DOM objects.
+
 // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
 
 // The ._invoke method unifies the implementations of the .next,
@@ -5008,18 +5010,18 @@
 /* 310 */
 
 /*!
-  * Bootstrap v4.5.0 (https://getbootstrap.com/)
+  * Bootstrap v4.5.3 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
+
+/*#__PURE__*/
 
 /**
    * --------------------------------------------------------------------------
    * Public Util Api
    * --------------------------------------------------------------------------
    */
-
-// eslint-disable-next-line no-bitwise
 
 // "~~" acts like a faster Math.floor() here
 
@@ -5028,8 +5030,6 @@
 // Return 0 if element or transition duration is not found
 
 // If multiple durations are defined, take the first
-
-// TODO: Remove in v5
 
 // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
@@ -5044,8 +5044,6 @@
    * Constants
    * ------------------------------------------------------------------------
    */
-
-/*#__PURE__*/
 
 // Getters
 
@@ -5192,8 +5190,8 @@
 
 /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.0): tools/sanitizer.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Bootstrap (v4.5.3): tools/sanitizer.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -5209,8 +5207,8 @@
 
 /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.0): util.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Bootstrap (v4.5.3): util.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
